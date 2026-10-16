@@ -1,0 +1,29 @@
+[
+  {
+    "article_id": "01",
+    "agent_name": "/root/fresh_writer_01",
+    "harness_tool": "collaboration.spawn_agent",
+    "fork_turns": "none",
+    "packet": "/home/ec2-user/projects/hop3-fresh-writer-test/evidence/writer-1-packet.json",
+    "packet_sha256": "ed076c68cb62f5d5d7ab272befdcaebb20ee12af896cd878b2f748a6c0e9f6b8",
+    "started_at": "2026-10-16T09:49:11.168311+00:00"
+  },
+  {
+    "article_id": "02",
+    "agent_name": "/root/fresh_writer_02",
+    "harness_tool": "collaboration.spawn_agent",
+    "fork_turns": "none",
+    "packet": "/home/ec2-user/projects/hop3-fresh-writer-test/evidence/writer-2-packet.json",
+    "packet_sha256": "fd18bb35a4803d8babee2caadbbbf7c2dd3bd34c8bc6caf23699937ad1370143",
+    "started_at": "2026-10-16T09:51:35.208636+00:00"
+  },
+  {
+    "article_id": "03",
+    "agent_name": "/root/fresh_writer_03",
+    "harness_tool": "collaboration.spawn_agent",
+    "fork_turns": "none",
+    "packet": "/home/ec2-user/projects/hop3-fresh-writer-test/evidence/writer-3-packet.json",
+    "packet_sha256": "f369ea809e6378faff266ad6bf723a2a99471331197fe4280b03c22f073f48f6",
+    "started_at": "2026-10-16T09:52:56.466213+00:00"
+  }
+]

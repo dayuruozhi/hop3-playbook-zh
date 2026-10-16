@@ -1,0 +1,9 @@
+{
+  "docs/tutorials/03-探索与提交.md": "参阅：探索、检查与重试",
+  "README.md": "项目安装说明",
+  "package.json": "运行版本要求",
+  "USAGE.md": "命令行、状态与运行方式",
+  "docs/tutorials/05-并行与遍历.md": "逐项遍历与结果收集",
+  "docs/concepts/HopSpec V3语法参考.md": "中文关键词及变量语法",
+  "docs/concepts/HopAnt概念.md": "复用模式的信任边界"
+}

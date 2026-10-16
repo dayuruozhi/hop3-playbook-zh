@@ -1,0 +1,33 @@
+{
+  "status": "step_ready",
+  "instance_id": "3d4b2418-c1a5-4124-943a-16198fb430b2",
+  "step_id": "2.1",
+  "step_type": "call",
+  "summary": "驱动层须为本次调用创建新写作 agent",
+  "context": {
+    "task_context": "Goal（整个规约的总目标，供你理解所处任务；你本步的任务在 L4）: 对三篇稿件逐篇调用单篇审查子规约，由驱动层为每次调用创建一个不继承父对话历史的新写作 agent，收集其真实生成的报告。\nConstraints（全程红线，你的产出不得违反）:\n- 每次 review-one 调用都必须创建新的写作 agent，不可把同一 agent 用于不同文章。\n- 新写作 agent 只接收当前文章、完整审查要求和本子实例的当前待办，不接收前面文章的报告。\n- 新 agent 的创建及不继承父历史由驱动层落实，并单独记录，不把子实例状态隔离冒充模型上下文隔离。\nOutputs（整个规约最终交付物，非你本步输出——你的输出声明在 L4）: reviews % [yaml]\nSteps 骨架:\n1. [act] 读取稿件列表\n2. [loop for-each article in articles] 每篇调用一次独立写作任务\n  2.1. [call] 驱动层须为本次调用创建新写作 agent\n",
+    "position_context": "  2 [loop] (iter 3) 每篇调用一次独立写作任务 | + → reviews（容器最终聚合交付的输出——不是你本步的输出,你的在 L4）\n    └─ 当前步骤: 2.1 [call] 驱动层须为本次调用创建新写作 agent ◀\n",
+    "progress_summary": "✓ 1 [act] 读取稿件列表 → articles\n▶ 2 [loop]: 每篇调用一次独立写作任务\n  ▶ 2.1 [call]: 驱动层须为本次调用创建新写作 agent",
+    "inputs": {},
+    "node_decl": {
+      "step_id": "2.1",
+      "step_type": "call",
+      "summary": "驱动层须为本次调用创建新写作 agent",
+      "input_names": []
+    },
+    "instruction": "驱动层须为本次调用创建新写作 agent\n[CALL] callee_spec_id: review-one\ninputs (子参数 ← 父变量/字面量): article ← article, rubric ← rubric\noutputs (父变量 ← 子输出): review ← report",
+    "output_schema": [],
+    "iteration_history": "Loop 2 — iteration 3:\n  iter 1:\n    ✓ 2.1\n  iter 2:\n    ✓ 2.1"
+  },
+  "work_zone": "/home/ec2-user/projects/hop3-fresh-writer-test/work/.hopstate/3d4b2418-c1a5-4124-943a-16198fb430b2/work_zone",
+  "output_path": "/home/ec2-user/projects/hop3-fresh-writer-test/work/.hopstate/3d4b2418-c1a5-4124-943a-16198fb430b2/work_zone/out_2.1.json",
+  "call_protocol": {
+    "init_command": "node \"/home/ec2-user/projects/hop3/dist/cli.js\" --json init \"/home/ec2-user/projects/hop3-fresh-writer-test/work/review-one.md\" --parent 3d4b2418-c1a5-4124-943a-16198fb430b2 --step 2.1 --child-instance 2.1.3 --params \"@/home/ec2-user/projects/hop3-fresh-writer-test/work/.hopstate/3d4b2418-c1a5-4124-943a-16198fb430b2/cmd_args/calls-2.1.3.params.json\" --state-dir \"/home/ec2-user/projects/hop3-fresh-writer-test/work/.hopstate\" --trace 3d4b2418-c1a5-4124-943a-16198fb430b2 --workspace \"/home/ec2-user/projects/hop3-fresh-writer-test/work\" --log-dir \"/home/ec2-user/projects/hop3-fresh-writer-test/work/.hoplog/fresh-writer-batch-20261016T094824-d9ba/calls/2.1.3/log\" --log-level info",
+    "child_state_dir": "/home/ec2-user/projects/hop3-fresh-writer-test/work/.hopstate/3d4b2418-c1a5-4124-943a-16198fb430b2/calls",
+    "child_instance": "2.1.3",
+    "child_advance": "node \"/home/ec2-user/projects/hop3/dist/cli.js\" --json advance --state-dir \"/home/ec2-user/projects/hop3-fresh-writer-test/work/.hopstate/3d4b2418-c1a5-4124-943a-16198fb430b2/calls\" --instance 2.1.3",
+    "report_completed": "node \"/home/ec2-user/projects/hop3/dist/cli.js\" --json submit_and_fetch_next 2.1 --child-instance 2.1.3 --state-dir \"/home/ec2-user/projects/hop3-fresh-writer-test/work/.hopstate\" --instance 3d4b2418-c1a5-4124-943a-16198fb430b2",
+    "report_failed": "node \"/home/ec2-user/projects/hop3/dist/cli.js\" --json submit_and_fetch_next 2.1 --failure-child 2.1.3 --state-dir \"/home/ec2-user/projects/hop3-fresh-writer-test/work/.hopstate\" --instance 3d4b2418-c1a5-4124-943a-16198fb430b2"
+  },
+  "workspace_dir": "/home/ec2-user/projects/hop3-fresh-writer-test/work"
+}

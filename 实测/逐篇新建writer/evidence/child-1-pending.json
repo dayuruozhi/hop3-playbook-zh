@@ -1,0 +1,48 @@
+{
+  "status": "step_ready",
+  "instance_id": "2.1.1",
+  "step_id": "1.1",
+  "step_type": "reason",
+  "summary": "根据当前稿件和完整标准生成报告",
+  "context": {
+    "task_context": "Goal（整个规约的总目标，供你理解所处任务；你本步的任务在 L4）: 对给定的一篇中文稿件生成有原文依据的六项审查报告。\nConstraints（全程红线，你的产出不得违反）:\n- 仅审查输入 article，不阅读其他稿件或之前的报告。\n- 六项栏目全部提供；原文依据至少两条，每条包含原样引文与具体解读。\n- 缺失信息应明确指出，不补造事实，建议与证据相称。\nOutputs（整个规约最终交付物，非你本步输出——你的输出声明在 L4）: report % yaml\nSteps 骨架:\n1. [subtask retry=1] 写作并核对本篇报告\n  1.1. [reason] 根据当前稿件和完整标准生成报告\n  1.2. [check] 程序核对六项栏目和原文引文\n",
+    "position_context": "  1 [subtask] 写作并核对本篇报告 | + → report（容器最终聚合交付的输出——不是你本步的输出,你的在 L4）\n    └─ 当前步骤: 1.1 [reason] 根据当前稿件和完整标准生成报告 ◀\n",
+    "progress_summary": "No steps completed yet.",
+    "inputs": {
+      "article": {
+        "编号": "01",
+        "标题": "每周二十分钟培训，真的比集中培训有效吗？",
+        "正文": "青禾团队把每月一次的集中培训，改成每周二十分钟的微课，试行六周。参加课后测验的十八名员工，平均得分由七十二分提高到八十四分。两次测验使用了相同的题目。文章据此认为，微课显著提升了学习效果，建议所有部门采用。文中没有说明团队总人数，也没有记录员工能否在实际工作中独立完成相关任务。"
+      },
+      "rubric": "逐篇审查。六项栏目：核心判断、原文依据、可取之处、关键缺口、待核实问题、处理建议。原文依据至少两条，每条含原样引文和针对引文支持范围的解读。其他栏目为具体文字。判断要区分关联与因果，针对本篇的数据、方法和信息缺失提出追问，建议与现有证据相称。不得补造事实，不使用其他文章或审查报告。"
+    },
+    "input_meta": {
+      "article": {
+        "type": "yaml"
+      },
+      "rubric": {
+        "type": "text"
+      }
+    },
+    "node_decl": {
+      "step_id": "1.1",
+      "step_type": "reason",
+      "summary": "根据当前稿件和完整标准生成报告",
+      "input_names": [
+        "article",
+        "rubric"
+      ]
+    },
+    "instruction": "阅读 article 和 rubric，独立写作报告，不使用其他文章的报告。\nreport 包含核心判断、原文依据、可取之处、关键缺口、待核实问题、处理建议。原文依据是引文和解读对象的列表，其余字段为文字。",
+    "output_schema": [
+      {
+        "name": "report",
+        "type": "yaml",
+        "description": ""
+      }
+    ]
+  },
+  "work_zone": "/home/ec2-user/projects/hop3-fresh-writer-test/work/.hopstate/3d4b2418-c1a5-4124-943a-16198fb430b2/calls/2.1.1/work_zone",
+  "output_path": "/home/ec2-user/projects/hop3-fresh-writer-test/work/.hopstate/3d4b2418-c1a5-4124-943a-16198fb430b2/calls/2.1.1/work_zone/out_1.1.json",
+  "workspace_dir": "/home/ec2-user/projects/hop3-fresh-writer-test/work"
+}

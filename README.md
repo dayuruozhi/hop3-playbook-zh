@@ -1,10 +1,10 @@
-# HOP3 中文实践手册：后面的稿件也要认真审
+# HOP 3.0 中文实践手册：后面的稿件也要认真审
 
 **[开始阅读完整手册 →](https://dayuruozhi.github.io/hop3-playbook-zh/)**
 
-把一批文章交给 AI，前面审得详细，后面却只剩几句套话，怎么办？本手册用中文审稿场景解释 HOP3 如何把要求变成逐篇执行的流程、检查和退回。
+把一批文章交给 AI，前面审得详细，后面却只剩几句套话，怎么办？本手册用中文审稿场景解释 HOP 3.0 如何把要求变成逐篇执行的流程、检查和退回。
 
-由 dayuruozhi 发布的独立实践手册。底层工具和规范见 **[HOP3 项目](https://github.com/hoplogic/hop3)**。
+由 dayuruozhi 发布的独立实践手册。底层工具和规范见 **[HOP 3.0 项目](https://github.com/hoplogic/hop3)**。
 
 ## 可以看到什么
 
@@ -54,7 +54,7 @@ python3 -m http.server 8875 --directory docs
 python3 实测/逐篇新建writer/evidence/verify.py
 ```
 
-可选：设置 `HOP_REPO` 为 HOP3 本地仓库路径，构建时另行核对引用文件在录制提交中存在。重新录制受控演示前，设置 `HOP_CLI` 为已构建的 HOP CLI 绝对路径，再执行 `python3 证据/录制.py`；这会生成一组新的录制，不是运行质量基准。
+可选：设置 `HOP_REPO` 为 HOP 3.0 本地仓库路径，构建时另行核对引用文件在录制提交中存在。重新录制受控演示前，设置 `HOP_CLI` 为已构建的 HOP CLI 绝对路径，再执行 `python3 证据/录制.py`；这会生成一组新的录制，不是运行质量基准。
 
 浏览器交互检查需要支持内置 WebSocket 的 Node.js 和 Google Chrome。先启动上述本地服务，再运行：
 
@@ -67,4 +67,4 @@ python3 qa/检查.py 1280
 
 GitHub Pages 从 `main` 分支的 `/docs` 发布。修改内容后重新运行构建，把源码及 `docs/` 一起提交推送。发布不依赖本机服务或临时隧道。
 
-本手册保留自有说明和实验边界；关于 HOP3 本身的最新信息，请以[上游仓库](https://github.com/hoplogic/hop3)为准。页面中的技术出处固定到录制版本，便于复核。
+本手册保留自有说明和实验边界；关于 HOP 3.0 本身的最新信息，请以[上游仓库](https://github.com/hoplogic/hop3)为准。页面中的技术出处固定到录制版本，便于复核。
